@@ -27,7 +27,6 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/utils/pointer"
 
-	"github.com/golang/glog"
 	tpb "github.com/google/kne/proto/topo"
 )
 
@@ -260,7 +259,7 @@ func generateInterfacesEnvs(pb *tpb.Node) (interfaceMap string, err error) {
 		ciscoInterfaceId, err := getCiscoInterfaceId(pb, eth)
 		if err == nil {
 			interfaceMap = fmt.Sprintf("%s;linux:%s", interfaceMap, eth)
-			//glog.Infof("interface map: %s, interface id: %s", interfaceMap, ciscoInterfaceId)
+			log.Infof("interface map: %s, interface id: %s", interfaceMap, ciscoInterfaceId)
 		} else {
 			return interfaceMap, err
 		}
@@ -323,7 +322,7 @@ func defaults(pb *tpb.Node) (*tpb.Node, error) {
 			"XR_INTERFACES": interfaceMap,
 			//"XR_INTERFACES": "linux:eth1;linux:eth2;linux:eth3;linux:eth4;linux:eth5;linux:eth6",
 			//"XR_MGMT_INTERFACES":   interfaceList,
-			"XR_MGMT_INTERFACES":   "linux:eth0",
+			//"XR_MGMT_INTERFACES":   "linux:eth0",
 			"XR_EVERY_BOOT_CONFIG": filepath.Join(pb.Config.ConfigPath, pb.Config.ConfigFile),
 		}
 	} else {
@@ -340,7 +339,7 @@ func defaults(pb *tpb.Node) (*tpb.Node, error) {
 	if pb.Model == "xrd" {
 		// XR_SNOOP_IP_INTERFACES should always set to MgmtEther0/RP0/CPU0/0
 		// This enables autmatic bringup of the managment interface for xrd
-		pb.Config.Env["XR_MGMT_INTERFACES"] = "linux:eth0"
+		pb.Config.Env["XR_MGMT_INTERFACES"] = "linux:eth0,snoop_v4"
 		//pb.Config.Env["XR_MGMT_INTERFACES"] = "MgmtEther0/RP0/CPU0/0"
 	}
 	return pb, nil
