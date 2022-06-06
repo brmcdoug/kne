@@ -16,10 +16,11 @@ kind load docker-image localhost/xrd:7.7.1.26I --name=kne
 
 2. Install and setup kne: https://github.com/google/kne/blob/main/docs/setup.md
 
-2. Before the "cd kne_cli" and "go install" step replace this file: https://github.com/google/kne/blob/main/topo/node/cisco/cisco.go with the cisco.go file in this repo: 
+2. Before the "cd kne_cli" and "go install" step replace this file: https://github.com/google/kne/blob/main/topo/node/cisco/cisco.go with the cisco.go file in this repo: https://github.com/brmcdoug/kne/blob/main/cisco.go
 
 3. Continue following kne setup
 
-4. Replace kne examples/3node-withtraffic.pb.txt with the 6node-xrd.pb.txt file: 
+4. Replace kne examples/3node-withtraffic.pb.txt with the 6node-xrd.pb.txt file: https://github.com/brmcdoug/kne/blob/main/6node-xrd.pb.txt
+5.
 
 
