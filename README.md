@@ -14,6 +14,7 @@ Instructions:
 1. Pull XRd docker .tgz then load into docker and kind:
 ```
 docker load -i xrd-container-x64.dockerv1.tgz-7.7.1.26I 
+docker tag localhost/ios-xr:7.7.1.26I localhost/xrd:7.7.1.26I
 kind load docker-image localhost/xrd:7.7.1.26I --name=kne
 ```
 
@@ -51,5 +52,14 @@ etc.
 Notes:
 XRd may take a few minutes to come up and provide a username/pw prompt. It may also take a few minutes for interfaces to come up
 As of this writing SSH to the XRd nodes isn't working...we hope to get that fixed soon
+
+My first deploy attempt failed due to lack of inotify resources. Deploy worked after bumping inotify up to 65k:
+```
+cat /proc/sys/fs/inotify/max_user_watches
+echo fs.inotify.max_user_watches=65536 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+
+cat /proc/sys/fs/inotify/max_user_instances
+echo fs.inotify.max_user_instances=65536 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+```
 
 
