@@ -43,6 +43,7 @@ kubectl exec -it -n xrd r25 /pkg/bin/xr_cli.sh
 kubectl exec -it -n xrd vm-1 /bin/sh
 etc.
 ```
+8. The config files in this repo will a setup user/pw combo of cisco/cisco123 on all XRd's
 
 Notes:
 XRd may take a few minutes to come up and provide a username/pw prompt. It may also take a few minutes for interfaces to come up
