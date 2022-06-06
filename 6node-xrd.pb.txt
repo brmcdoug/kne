@@ -1,0 +1,510 @@
+name: "xrd"
+nodes: {
+    name: "r25"
+    type: CISCO_XRD
+    vendor: CISCO
+    model: "xrd"
+    os: "ios-xr"
+    config: {
+        file: "r25.config"
+        image: "localhost/xrd:7.7.1.26I"
+        init_image: "networkop/init-wait:latest"
+        cert: {
+            self_signed: {
+                cert_name: "r25.pem",
+                key_name: "r25.key",
+                key_size: 2048,
+            }
+        }
+    }
+    services:{
+        key: 22
+        value: {
+            name: "ssh"
+            inside: 22
+        }
+    }
+    services:{
+        key: 57400 
+        value: {
+            name: "gnmi"
+            inside: 57400
+        }
+    }
+    interfaces: {
+        key: "eth1"
+        value: {
+          name: "GigabitEthernet0/0/0/0"
+        }
+    }
+    interfaces: {
+        key: "eth2"
+        value: {
+          name: "GigabitEthernet0/0/0/1"
+        }
+    } 
+    interfaces: {
+        key: "eth3"
+        value: {
+          name: "GigabitEthernet0/0/0/2"
+        }
+    }
+    interfaces: {
+        key: "eth4"
+        value: {
+          name: "GigabitEthernet0/0/0/3"
+        }
+    }
+    interfaces: {
+        key: "eth5"
+        value: {
+          name: "GigabitEthernet0/0/0/4"
+        }
+    }
+    interfaces: {
+        key: "eth6"
+        value: {
+          name: "GigabitEthernet0/0/0/5"
+        }
+    }  
+}
+nodes: {
+    name: "r26"
+    type: CISCO_XRD
+    vendor: CISCO
+    model: "xrd"
+    os: "ios-xr"
+    config: {
+        file: "r26.config"
+        image: "localhost/xrd:7.7.1.26I"
+        init_image: "networkop/init-wait:latest"
+        cert: {
+            self_signed: {
+                cert_name: "r26.pem",
+                key_name: "r26.key",
+                key_size: 2048,
+            }
+        }
+    }
+    services:{
+        key: 22
+        value: {
+            name: "ssh"
+            inside: 22
+        }
+    }
+    services:{
+        key: 57400 
+        value: {
+            name: "gnmi"
+            inside: 57400
+        }
+    }
+    interfaces: {
+        key: "eth1"
+        value: {
+          name: "GigabitEthernet0/0/0/0"
+        }
+    }
+    interfaces: {
+        key: "eth2"
+        value: {
+          name: "GigabitEthernet0/0/0/1"
+        }
+    } 
+    interfaces: {
+        key: "eth3"
+        value: {
+          name: "GigabitEthernet0/0/0/2"
+        }
+    }
+    interfaces: {
+        key: "eth4"
+        value: {
+          name: "GigabitEthernet0/0/0/3"
+        }
+    }
+    interfaces: {
+        key: "eth5"
+        value: {
+          name: "GigabitEthernet0/0/0/4"
+        }
+    }
+    interfaces: {
+        key: "eth6"
+        value: {
+          name: "GigabitEthernet0/0/0/5"
+        }
+    } 
+}
+nodes: {
+    name: "r27"
+    type: CISCO_XRD
+    vendor: CISCO
+    model: "xrd"
+    os: "ios-xr"
+    config: {
+        file: "r27.config"
+        image: "localhost/xrd:7.7.1.26I"
+        init_image: "networkop/init-wait:latest"
+        cert: {
+            self_signed: {
+                cert_name: "r27.pem",
+                key_name: "r27.key",
+                key_size: 2048,
+            }
+        }
+    }
+    services:{
+        key: 22
+        value: {
+            name: "ssh"
+            inside: 22
+        }
+    }
+    services:{
+        key: 57400 
+        value: {
+            name: "gnmi"
+            inside: 57400
+        }
+    }
+    interfaces: {
+        key: "eth1"
+        value: {
+          name: "GigabitEthernet0/0/0/0"
+        }
+    }
+    interfaces: {
+        key: "eth2"
+        value: {
+          name: "GigabitEthernet0/0/0/1"
+        }
+    } 
+    interfaces: {
+        key: "eth3"
+        value: {
+          name: "GigabitEthernet0/0/0/2"
+        }
+    }
+}
+nodes: {
+    name: "r28"
+    type: CISCO_XRD
+    vendor: CISCO
+    model: "xrd"
+    os: "ios-xr"
+    config: {
+        file: "r28.config"
+        image: "localhost/xrd:7.7.1.26I"
+        init_image: "networkop/init-wait:latest"
+        cert: {
+            self_signed: {
+                cert_name: "r28.pem",
+                key_name: "r28.key",
+                key_size: 2048,
+            }
+        }
+    }
+    services:{
+        key: 22
+        value: {
+            name: "ssh"
+            inside: 22
+        }
+    }
+    services:{
+        key: 57400 
+        value: {
+            name: "gnmi"
+            inside: 57400
+        }
+    }
+    interfaces: {
+        key: "eth1"
+        value: {
+          name: "GigabitEthernet0/0/0/0"
+        }
+    }
+    interfaces: {
+        key: "eth2"
+        value: {
+          name: "GigabitEthernet0/0/0/1"
+        }
+    } 
+    interfaces: {
+        key: "eth3"
+        value: {
+          name: "GigabitEthernet0/0/0/2"
+        }
+    }
+}
+nodes: {
+    name: "r29"
+    type: CISCO_XRD
+    vendor: CISCO
+    model: "xrd"
+    os: "ios-xr"
+    config: {
+        file: "r29.config"
+        image: "localhost/xrd:7.7.1.26I"
+        init_image: "networkop/init-wait:latest"
+        cert: {
+            self_signed: {
+                cert_name: "r29.pem",
+                key_name: "r29.key",
+                key_size: 2048,
+            }
+        }
+    }
+    services:{
+        key: 22
+        value: {
+            name: "ssh"
+            inside: 22
+        }
+    }
+    services:{
+        key: 57400 
+        value: {
+            name: "gnmi"
+            inside: 57400
+        }
+    }
+    interfaces: {
+        key: "eth1"
+        value: {
+          name: "GigabitEthernet0/0/0/0"
+        }
+    }
+    interfaces: {
+        key: "eth2"
+        value: {
+          name: "GigabitEthernet0/0/0/1"
+        }
+    } 
+    interfaces: {
+        key: "eth3"
+        value: {
+          name: "GigabitEthernet0/0/0/2"
+        }
+    }
+}
+nodes: {
+    name: "r30"
+    type: CISCO_XRD
+    vendor: CISCO
+    model: "xrd"
+    os: "ios-xr"
+    config: {
+        file: "r30.config"
+        image: "localhost/xrd:7.7.1.26I"
+        init_image: "networkop/init-wait:latest"
+        cert: {
+            self_signed: {
+                cert_name: "r30.pem",
+                key_name: "r30.key",
+                key_size: 2048,
+            }
+        }
+    }
+    services:{
+        key: 22
+        value: {
+            name: "ssh"
+            inside: 22
+        }
+    }
+    services:{
+        key: 57400 
+        value: {
+            name: "gnmi"
+            inside: 57400
+        }
+    }
+    interfaces: {
+        key: "eth1"
+        value: {
+          name: "GigabitEthernet0/0/0/0"
+        }
+    }
+    interfaces: {
+        key: "eth2"
+        value: {
+          name: "GigabitEthernet0/0/0/1"
+        }
+    } 
+    interfaces: {
+        key: "eth3"
+        value: {
+          name: "GigabitEthernet0/0/0/2"
+        }
+    }
+}
+
+nodes: {                                                    
+    name: "vm-1"                                              
+    type: HOST 
+    services:{
+        key: 22
+        value: {
+            name: "ssh"
+            inside: 22
+        }
+    }                                                                                              
+}   
+nodes: {                                                    
+    name: "vm-2"                                              
+    type: HOST 
+    services:{
+        key: 22
+        value: {
+            name: "ssh"
+            inside: 22
+        }
+    }                                                                                              
+} 
+nodes: {                                                    
+    name: "vm-3"                                              
+    type: HOST  
+    services:{
+        key: 22
+        value: {
+            name: "ssh"
+            inside: 22
+        }
+    }                                                                                             
+}
+nodes: {                                                    
+    name: "vm-4"                                              
+    type: HOST   
+    services:{
+        key: 22
+        value: {
+            name: "ssh"
+            inside: 22
+        }
+    }                                                                                            
+} 
+nodes: {                                                    
+    name: "vm-5"                                              
+    type: HOST   
+    services:{
+        key: 22
+        value: {
+            name: "ssh"
+            inside: 22
+        }
+    }                                                                                            
+} 
+nodes: {                                                    
+    name: "vm-6"                                              
+    type: HOST  
+    services:{
+        key: 22
+        value: {
+            name: "ssh"
+            inside: 22
+        }
+    }                                                                                             
+}                                                     
+links: {
+    a_node: "r25"
+    a_int: "eth1"
+    z_node: "vm-1"
+    z_int: "eth1"
+}
+links: {
+    a_node: "r25"
+    a_int: "eth2"
+    z_node: "vm-2"
+    z_int: "eth1"
+}
+links: {
+    a_node: "r25"
+    a_int: "eth3"
+    z_node: "r27"
+    z_int: "eth1"
+}
+links: {
+    a_node: "r25"
+    a_int: "eth4"
+    z_node: "r28"
+    z_int: "eth1"
+}
+links: {
+    a_node: "r25"
+    a_int: "eth5"
+    z_node: "r29"
+    z_int: "eth1"
+}
+links: {
+    a_node: "r25"
+    a_int: "eth6"
+    z_node: "r30"
+    z_int: "eth1"
+}
+links: {
+    a_node: "r26"
+    a_int: "eth1"
+    z_node: "vm-1"
+    z_int: "eth2"
+}
+links: {
+    a_node: "r26"
+    a_int: "eth2"
+    z_node: "vm-2"
+    z_int: "eth2"
+}
+links: {
+    a_node: "r26"
+    a_int: "eth3"
+    z_node: "r27"
+    z_int: "eth2"
+}
+links: {
+    a_node: "r26"
+    a_int: "eth4"
+    z_node: "r28"
+    z_int: "eth2"
+}
+links: {
+    a_node: "r26"
+    a_int: "eth5"
+    z_node: "r29"
+    z_int: "eth2"
+}
+links: {
+    a_node: "r26"
+    a_int: "eth6"
+    z_node: "r30"
+    z_int: "eth2"
+}
+
+links: {
+    a_node: "r27"
+    a_int: "eth3"
+    z_node: "vm-3"
+    z_int: "eth1"
+}
+
+links: {
+    a_node: "r28"
+    a_int: "eth3"
+    z_node: "vm-4"
+    z_int: "eth1"
+}
+
+links: {
+    a_node: "r29"
+    a_int: "eth3"
+    z_node: "vm-5"
+    z_int: "eth1"
+} 
+
+links: {
+    a_node: "r30"
+    a_int: "eth3"
+    z_node: "vm-6"
+    z_int: "eth1"
+} 
