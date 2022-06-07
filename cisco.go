@@ -259,7 +259,7 @@ func generateInterfacesEnvs(pb *tpb.Node) (interfaceMap string, err error) {
 		ciscoInterfaceId, err := getCiscoInterfaceId(pb, eth)
 		if err == nil {
 			interfaceMap = fmt.Sprintf("%s;linux:%s", interfaceMap, eth)
-			log.Infof("interface map: %s, interface id: %s", interfaceMap, ciscoInterfaceId)
+			log.Infof("interface id: %s", ciscoInterfaceId)
 		} else {
 			return interfaceMap, err
 		}
