@@ -339,7 +339,7 @@ func defaults(pb *tpb.Node) (*tpb.Node, error) {
 	if pb.Model == "xrd" {
 		// XR_SNOOP_IP_INTERFACES should always set to MgmtEther0/RP0/CPU0/0
 		// This enables autmatic bringup of the managment interface for xrd
-		pb.Config.Env["XR_MGMT_INTERFACES"] = "linux:eth0,snoop_v4,snoop_v4_default_route,chksm"
+		pb.Config.Env["XR_MGMT_INTERFACES"] = "linux:eth0,snoop_v4,snoop_v4_default_route,chksum"
 		//pb.Config.Env["XR_MGMT_INTERFACES"] = "MgmtEther0/RP0/CPU0/0"
 	}
 	return pb, nil
