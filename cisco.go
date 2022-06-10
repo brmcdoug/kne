@@ -319,28 +319,20 @@ func defaults(pb *tpb.Node) (*tpb.Node, error) {
 	}
 	if pb.Config.Env == nil {
 		pb.Config.Env = map[string]string{
-			"XR_INTERFACES": interfaceMap,
-			//"XR_INTERFACES": "linux:eth1;linux:eth2;linux:eth3;linux:eth4;linux:eth5;linux:eth6",
-			//"XR_MGMT_INTERFACES":   interfaceList,
-			//"XR_MGMT_INTERFACES":   "linux:eth0",
+			"XR_INTERFACES":        interfaceMap,
 			"XR_EVERY_BOOT_CONFIG": filepath.Join(pb.Config.ConfigPath, pb.Config.ConfigFile),
 		}
 	} else {
 		if pb.Config.Env["XR_INTERFACES"] == "" {
 			pb.Config.Env["XR_INTERFACES"] = interfaceMap
 		}
-		//if pb.Config.Env["XR_CHECKSUM_OFFLOAD_COUNTERACT"] == "" {
-		//	pb.Config.Env["XR_CHECKSUM_OFFLOAD_COUNTERACT"] = interfaceList
-		//}
 		if pb.Config.Env["XR_EVERY_BOOT_CONFIG"] == "" {
 			pb.Config.Env["XR_EVERY_BOOT_CONFIG"] = filepath.Join(pb.Config.ConfigPath, pb.Config.ConfigFile)
 		}
 	}
 	if pb.Model == "xrd" {
-		// XR_SNOOP_IP_INTERFACES should always set to MgmtEther0/RP0/CPU0/0
-		// This enables autmatic bringup of the managment interface for xrd
+		// snoop on XRd MGMT interface allows CNI to give it an IP address
 		pb.Config.Env["XR_MGMT_INTERFACES"] = "linux:eth0,snoop_v4,snoop_v4_default_route,chksum"
-		//pb.Config.Env["XR_MGMT_INTERFACES"] = "MgmtEther0/RP0/CPU0/0"
 	}
 	return pb, nil
 }
