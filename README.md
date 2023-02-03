@@ -1,5 +1,7 @@
 # kne
 
+Note: this stuff worked as of about August/September 2022. Hopefully it still does, but the warranty has expired :)
+
 Sample configs and a pb.txt file for launching a six router XRd topology (plus attached workload "VMs" using Google's delightful KNE tool: https://github.com/google/kne
 
 
