@@ -16,7 +16,7 @@ Instructions:
 1. Pull XRd docker .tgz then load into docker and kind:
 ```
 docker load -i xrd-container-x64.dockerv1.tgz-7.8.1
-docker tag localhost/ios-xr:7.7.1.26I localhost/xrd:7.8.1
+docker tag ios-xr/xrd-control-plane:7.8.1 localhost/xrd:7.8.1
 kind load docker-image localhost/xrd:7.8.1 --name=kne
 ```
 
