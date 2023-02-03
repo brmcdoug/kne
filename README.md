@@ -33,6 +33,9 @@ https://github.com/brmcdoug/kne/blob/main/cisco.go
 https://github.com/brmcdoug/kne/blob/main/6node-xrd.pb.txt
 
 5. run "kne_cli create <6node-xrd.pb.txt>"
+```
+kne_cli create 6node-xrd.pb.txt
+```
 
 6. check containers:
 
