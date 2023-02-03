@@ -7,7 +7,7 @@ nodes: {
     os: "ios-xr"
     config: {
         file: "r25.config"
-        image: "localhost/xrd:7.7.1.26I"
+        image: "localhost/xrd:7.8.1"
         init_image: "networkop/init-wait:latest"
         cert: {
             self_signed: {
@@ -76,7 +76,7 @@ nodes: {
     os: "ios-xr"
     config: {
         file: "r26.config"
-        image: "localhost/xrd:7.7.1.26I"
+        image: "localhost/xrd:7.8.1"
         init_image: "networkop/init-wait:latest"
         cert: {
             self_signed: {
@@ -145,7 +145,7 @@ nodes: {
     os: "ios-xr"
     config: {
         file: "r27.config"
-        image: "localhost/xrd:7.7.1.26I"
+        image: "localhost/xrd:7.8.1"
         init_image: "networkop/init-wait:latest"
         cert: {
             self_signed: {
@@ -196,7 +196,7 @@ nodes: {
     os: "ios-xr"
     config: {
         file: "r28.config"
-        image: "localhost/xrd:7.7.1.26I"
+        image: "localhost/xrd:7.8.1"
         init_image: "networkop/init-wait:latest"
         cert: {
             self_signed: {
@@ -247,7 +247,7 @@ nodes: {
     os: "ios-xr"
     config: {
         file: "r29.config"
-        image: "localhost/xrd:7.7.1.26I"
+        image: "localhost/xrd:7.8.1"
         init_image: "networkop/init-wait:latest"
         cert: {
             self_signed: {
@@ -298,7 +298,7 @@ nodes: {
     os: "ios-xr"
     config: {
         file: "r30.config"
-        image: "localhost/xrd:7.7.1.26I"
+        image: "localhost/xrd:7.8.1"
         init_image: "networkop/init-wait:latest"
         cert: {
             self_signed: {
